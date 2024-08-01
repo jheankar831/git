@@ -1,0 +1,13 @@
+import pandas as pd
+a=pd.Series([10,20,30,40,50])
+b=pd.Series([40,50,60,70,80])
+print("Series A:")
+print(a)
+print("\nSeries B")
+print(b)
+non_com=a[~a.isin(b)].tolist()+b[~b.isin(a)].tolist()
+print("\nSmallest element in a:\n",a.min())
+print("\nlargest element in a:\n",a.max())
+print("\nsum of series B:\n",b.sum())
+print("\naverage of series A:\n",a.mean())
+print("\nmedian of series B:\n",a.median())
